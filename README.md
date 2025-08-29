@@ -55,10 +55,10 @@ The dashboards expect three CSV files with the following columns:
 1. **Open Power BI Desktop**.  
 2. **Get Data ▸ Folder** ➜ browse to `Dashboard/sample-data/`.  
 3. When the preview appears, choose **Transform Data** (don’t auto‑combine).  
-4. In Power Query, create three queries using the code in **`Dashboard/Queries.m`**:  
+4. In Power Query, create three queries using the code in **`Dashboard/Dashboarding.md`**:  
    - Replace the folder path inside each query to point at `Dashboard/sample-data/`.
 5. Click **Close & Apply**.
-6. In the Report view, add the ready‑made measures by pasting **`Dashboard/Measures.dax`** into a new measure group under the `ReposWithVulnerabilities` table.
+6. In the Report view, add the ready‑made measures by pasting DAX from **`Dashboard/Dashboarding.md`** into a new measure group under the `ReposWithVulnerabilities` table.
 7. Build the two pages following **“Page layouts”** below (or mirror the screenshot).
 
 You now have a working PBIX backed by sample data.
