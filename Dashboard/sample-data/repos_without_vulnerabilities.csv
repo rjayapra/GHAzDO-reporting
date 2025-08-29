@@ -1,0 +1,4 @@
+Organization,Project,Repository,RepositoryId,DefaultBranch,SupportedLangs,HasAnyCode,CodeQLAnalyzedBranches,Reason
+contoso,Infra,infra-scripts,repo789,main,,False,,NoCode
+contoso,Data,data-pipeline,repo321,main,scala,True,,UnsupportedLanguage
+contoso,WebApp,webapp-ui,repo654,main,javascript,True,main,NoAlerts

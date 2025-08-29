@@ -1,0 +1,4 @@
+Organization,Project,Repository,RepositoryId,AlertId,AlertType,Severity,State,Title,RuleId,RuleName,RepoUrl,FirstSeen,LastSeen
+contoso,WebApp,webapp-api,repo123,101,code,High,open,SQL Injection,sql-injection,SQL Injection Rule,https://dev.azure.com/contoso/WebApp/_git/webapp-api,2023-10-01T12:00:00,2023-10-05T12:00:00
+contoso,WebApp,webapp-api,repo123,102,secret,Critical,open,Hardcoded Secret,hardcoded-secret,Hardcoded Secret Rule,https://dev.azure.com/contoso/WebApp/_git/webapp-api,2023-10-02T12:00:00,2023-10-06T12:00:00
+contoso,MobileApp,mobile-sdk,repo456,103,dependency,Medium,resolved,Vulnerable Library,vuln-lib,Vulnerable Library Rule,https://dev.azure.com/contoso/MobileApp/_git/mobile-sdk,2023-09-15T12:00:00,2023-09-20T12:00:00

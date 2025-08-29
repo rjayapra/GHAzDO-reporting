@@ -1,0 +1,32 @@
+# azure-pipelines.yml
+trigger: none
+schedules:
+- cron: "0 2 * * *"  # 2 AM UTC daily
+  always: true
+  branches:
+    include: [ main ]
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  ORG: 'cityofottawa'   # <-- change
+  OUTPUT_DIR: '$(Build.ArtifactStagingDirectory)\ghas'
+
+steps:
+- task: PowerShell@2
+  displayName: Export GHAS data
+  inputs:
+    targetType: 'inline'
+    script: |
+      $ErrorActionPreference = 'Stop'
+      New-Item -ItemType Directory -Force -Path "$(OUTPUT_DIR)" | Out-Null
+      $scriptUrl = "$(Build.SourcesDirectory)\Scripts\Export-GHAS-AdoDashboards.ps1"
+      # Or embed script as a repo file (recommended)
+      . $scriptUrl -Organization "$(ORG)" -Pat "$(GHAS_PAT)" -OutputDir "$(OUTPUT_DIR)"
+  env:
+    GHAS_PAT: $(GHAS_PAT)   # define as secret variable in pipeline
+
+- publish: $(OUTPUT_DIR)
+  artifact: ghas-data
+  displayName: Publish GHAS CSVs
