@@ -107,14 +107,14 @@ Slicers: Project, Reason
 
 ### ✅ Features
 
-Pulls Advanced Security alerts (CodeQL, Dependency, Secret scanning) via Azure DevOps REST APIs.
-Detects CodeQL-supported languages and code presence.
-Classifies repos into two categories for reporting.
-Exports three CSVs:
+* Pulls Advanced Security alerts (CodeQL, Dependency, Secret scanning) via Azure DevOps REST APIs.
+* Detects CodeQL-supported languages and code presence.
+* Classifies repos into two categories for reporting.
+* Exports three CSVs for sample dashboard:
 
-alerts.csv – detailed alert-level data.
-repos_with_vulnerabilities.csv – summary for repos with alerts.
-repos_without_vulnerabilities.csv – summary for repos with no alerts and reason.
+  - alerts.csv – detailed alert-level data.
+  - repos_with_vulnerabilities.csv – summary for repos with alerts.
+  - repos_without_vulnerabilities.csv – summary for repos with no alerts and reason.
 
 
 Includes Power BI template (Power Query + DAX) for two dashboards.
@@ -122,13 +122,13 @@ Includes Power BI template (Power Query + DAX) for two dashboards.
 
 ### 📚 References
 
-https://learn.microsoft.com/en-us/rest/api/azure/devops/advancedsecurity/alerts
-https://learn.microsoft.com/en-us/codeql/codeql-overview
-https://powerbi.microsoft.com/desktop
+- [Advanced Security Alerts](https://learn.microsoft.com/en-us/rest/api/azure/devops/advancedsecurity/alerts)
+- [Codeql overview](https://learn.microsoft.com/en-us/codeql/codeql-overview)
+- [PoewrBI Desktop](https://powerbi.microsoft.com/desktop)
 
 
 ### ✅ Next Steps
 
-Replace sample CSVs with real exports from your Azure DevOps org.
-Automate with the included Azure Pipeline for scheduled refresh.
-Connect Power BI to your pipeline artifact or storage for live dashboards.
+* Replace sample CSVs with real exports from your Azure DevOps org.
+* Automate with the included Azure Pipeline for scheduled refresh.
+* Connect Power BI to your pipeline artifact or storage for live dashboards.
